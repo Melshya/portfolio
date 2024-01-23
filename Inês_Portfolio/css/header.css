@@ -1,0 +1,117 @@
+header {
+  position: absolute;
+  padding: 0px 15px;
+  left: 0px;
+  right: 0px;
+  border-bottom: 1px solid #423940;
+  z-index: 11;
+}
+
+.fixed {
+  background-color: #EEEAE7;
+  position: fixed;
+  border-color: #29221C;
+  animation: fixHeader 1s ease;
+  z-index: 11;
+}
+
+@keyframes fixHeader {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+header .row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-name a {
+  font-size: 22px;
+  font-weight: 500;
+  color: rgb(236, 241, 250);
+  position: relative;
+  font-family: 'Montserrat', cursive;
+  font-weight: 900;
+}
+
+.fixed .brand-name a {
+  color: #29221C;
+}
+
+.hamburger .fa {
+  font-size: 20px;
+  background-color: #EEEAE7;
+  color: #29221C;
+  display: none;
+  height: 30px;
+  width: 35px;
+  border-radius: 2px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #EEEAE7;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 35px;
+}
+
+.navbar ul li a {
+  font-size: 15px;
+  line-height: 72px;
+  color: rgb(236, 241, 250);
+  font-weight: 600;
+  /* display: block; */
+  position: relative;
+}
+
+.fixed .navbar ul li a {
+  color: #29221C;
+}
+
+.navbar ul li a::before {
+  content: "";
+  height: 2px;
+  background-color: #8B8D5D;
+  width: 0%;
+  position: absolute;
+  right: 0px;
+  bottom: -27px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin-bottom: 22px;
+}
+
+.fixed .navbar ul li a::before {
+  margin-bottom: 22px;
+  background-color: #8B8D5D;
+}
+
+.navbar ul li a:hover::before {
+  width: 100%;
+  left: 0px;
+}
+
+.navbar ul li a.active::before {
+  background-color: #8B8D5D;
+  margin-bottom: 22px;
+  width: 100%;
+  left: 0;
+}
